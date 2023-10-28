@@ -1,0 +1,7 @@
+-- Tabela de Logs de Acesso
+CREATE TABLE LogsAcesso (
+    LogID INT PRIMARY KEY AUTO_INCREMENT,
+    UsuarioID INT NOT NULL,
+    DataAcesso TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (UsuarioID) REFERENCES Usuarios(UsuarioID)
+);
